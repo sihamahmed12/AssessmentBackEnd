@@ -1,3 +1,6 @@
+const feelings = [];
+let globalID = 0;
+
 module.exports = {
 
     getCompliment: (req, res) => {
@@ -33,12 +36,20 @@ module.exports = {
         res.status(200).send(submit)
     },
     getFeeling: (req,res) => {
+        const {title} = req.body 
+        
+        feelings.push({
+            title,
+            id: globalID
+        });
+        globalID++;
+
         res.status(200).send(feelings)
     }, 
     deleteFeeling: (req,res) => {
-        let index = feelings.findindex(elm => elem.id === +req.params.id)
-        feelings.splic(index, 1)
-        res.staus(200).send(feelings)
+        let index = feelings.findIndex(elem => elem.id === +req.params.id)
+        feelings.splice(index, 1)
+        res.status(200).send(feelings)
     },
     updateFeeling: (req,res) => {
         const {type} = req.body;
@@ -46,15 +57,15 @@ module.exports = {
         res.status(200).send(goals);
     }, 
     createfeeling: (req,res) => {
-        console.log(req.body)
         const {title} = req.body;
         let newFeeling = {
             id:globalID,
-            titleLtitle
+            title
         }
-        feeling.push(newFeeling);
+        feelings.push(newFeeling);
+
         globalID++;
-        res.status(200).send(feeling)
+        res.status(200).send(feelings)
     }
 }
 

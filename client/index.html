@@ -1,56 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Feel Good Page</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body class="container">
-    <div>
-    <div>
-        <img src="images/Compliment.jpg"> 
-        <img src="images/BeHumble.jpg">
-    </div>
-    <div>
-        <button id="complimentButton">Get a compliment</button>
-        <button id="humbledButton">Get Humbled</button>
-        <button id="fortuneButton">Get a Fortune</button>
-    </div>
-  </div>
-  <br>
-  <br>
-  <h4> What am i Feelling?</h4>
-  <form>
-  <select name = "Feeling_Categories" id="Feeling_Categories">
-        <option value = "1" selcted = "selcted">select</option>
-        <option value="1">Mad</option>
-        <option value="2">Bliss</option> 
-        <option value="3">Goofy</option>
-        <option value="4">Annoyed</option>
-        <option value ="5">Do i have to choose?</option>
-  </select>
-  <div>
-    <p>Write Why? </p>
-    <input type="text" id="title">
+    <head>
+        <title>Feel Good Page</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="container">
+        <div>
+            <div>
+                <img src="images/Compliment.jpg" />
+                <img src="images/BeHumble.jpg" />
+            </div>
+            <div>
+                <button id="complimentButton">Get a compliment</button>
+                <button id="humbledButton">Get Humbled</button>
+                <button id="fortuneButton">Get a Fortune</button>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h4>What am i Feelling?</h4>
+        <form>
+            <select name="Feeling_Categories" id="Feeling_Categories">
+                <option value="1" selcted="select">select</option>
+                <option value="1">Mad</option>
+                <option value="2">Bliss</option>
+                <option value="3">Goofy</option>
+                <option value="4">Annoyed</option>
+                <option value="5">Do i have to choose?</option>
+            </select>
+            <div>
+                <p>Write Why?</p>
+                <input type="text" id="title" />
+            </div>
+            <input type="submit" id="submitBtn" />
+        </form>
+        <div class="boxed">
+            <section id="feeling-container"></section>
+        </div>
 
-  </div>
-  <input type="submit" id="submitBtn">
-  <form>
-    <div class="boxed">
-      
-      <section id="feeling-container"></section>
-
-    </div>
-
-
-   
-
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-
-
-
-
-    <script src="main.js"></script>
-    
-  </body>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
 </html>
